@@ -19,10 +19,6 @@ form {
   margin-bottom: 30px;
 }
 
-ul {
-  margin-top: 0;
-}
-
 footer {
   text-align: center;
   font-size: 13px;
@@ -62,7 +58,7 @@ a {
   padding: 14px 24px;
 }
 
-.recipe {
+.poem {
   font-size: 16px;
   background-color: #fff;
   padding: 20px;
