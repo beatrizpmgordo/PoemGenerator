@@ -6,23 +6,24 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link
       rel="stylesheet"
       href="src/style.css"
     />
-    <title>AI Poem Generator 📖</title>
+    <title>AI Portuguese Poem Generator 📖</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>AI Poem Generator</h1>
+        <h1>AI Portuguese Poem Generator</h1>
       </header>
 
       <main>
-        <form>
+        <form id="generator-form">
           <input
             type="text"
-            placeholder="Enter the recipe you're searching"
+            placeholder="Enter the the topic of the portuguese poem"
             required
             autocomplete="off"
             class="search-bar"
@@ -32,11 +33,10 @@
             class="submit-button"
           />
         </form>
-        <div class="poem">
-          No tempo em que festejavam o dia dos meus anos,
-          <br />
-          Eu era feliz e ninguém estava morto.
-        </div>
+        <div
+          class="poem"
+          id="poem"
+        ></div>
       </main>
 
       <footer>
