@@ -16,7 +16,6 @@ h1 {
 
 form {
   display: flex;
-  margin-bottom: 30px;
 }
 
 footer {
@@ -33,6 +32,10 @@ a {
 .container {
   margin: 80px auto;
   max-width: 600px;
+}
+
+.form-container {
+  margin-bottom: 30px;
 }
 
 .search-bar {
@@ -58,6 +61,12 @@ a {
   padding: 14px 24px;
 }
 
+.hint {
+  margin: 8px;
+  opacity: 0.6;
+  font-size: 12px;
+}
+
 .poem {
   font-size: 16px;
   background-color: #fff;
@@ -70,4 +79,23 @@ a {
 
 .poem strong {
   color: #885df1;
+}
+
+.hidden {
+  display: none;
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }

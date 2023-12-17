@@ -21,22 +21,25 @@
       </header>
 
       <main>
-        <form id="generator-form">
-          <input
-            type="text"
-            placeholder="Enter the the topic of the Portuguese poem"
-            required
-            autocomplete="off"
-            class="search-bar"
-            id="instructions"
-          />
-          <input
-            type="submit"
-            class="submit-button"
-          />
-        </form>
+        <div class="form-container">
+          <form id="generator-form">
+            <input
+              type="text"
+              placeholder="Enter the topic of the Portuguese poem"
+              required
+              autocomplete="off"
+              class="search-bar"
+              id="instructions"
+            />
+            <input
+              type="submit"
+              class="submit-button"
+            />
+          </form>
+          <div class="hint">i.e: Flower, Water or Lisbon</div>
+        </div>
         <div
-          class="poem"
+          class="poem hidden"
           id="poem"
         ></div>
       </main>
