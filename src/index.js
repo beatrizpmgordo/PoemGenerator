@@ -1,12 +1,23 @@
+function displayPoem(response) {
+  new Typewriter("#poem", {
+    strings: response.data.answer,
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
+}
+
 function generatePoem(event) {
   event.preventDefault();
 
-  new Typewriter("#poem", {
-    strings: "No tempo em que festejavam o dia dos meus anos,",
-    autoStart: true,
-    delay: 40,
-    cursor: "",
-  });
+  let instructionsInput = document.querySelector("#instructions");
+  let apiKey = "f388b055e9fa4ta275o3155340404ccb";
+  let context =
+    "You are a Poem expert and love to write short poems. Your mission is to generate a small, simple poem in basic HTML and separate each line with a <br />. Make sure to follow the user instructions. Do not include a title to the poem. Sign the poem with 'SheCodes AI' inside a <strong> element at the end of the poem and NOT at the beginning";
+  let prompt = `User instructions: Generate a Portuguese poem about ${instructionsInput.value}`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(displayPoem);
 }
 
 let formElement = document.querySelector("#generator-form");
